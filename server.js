@@ -8,6 +8,7 @@ const options = {
 console.log('key');
 console.log('crt');
 console.log(process.env.cert);
+console.log(Buffer.from(process.env.cert, 'utf8'));
 
 https.createServer(options, (req, res) => {
   res.writeHead(200);
