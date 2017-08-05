@@ -2,7 +2,7 @@ const https = require('https');
 const fs = require('fs');
 
 const options = {
-  key: fs.readFileSync('key.pem'),
+  key: process.env.cert,
   cert: fs.readFileSync('server.crt')
 };
 console.log('key');
