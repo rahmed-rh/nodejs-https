@@ -3,7 +3,8 @@ const fs = require('fs');
 
 const options = {
   key: fs.readFileSync('key.pem'),
-  cert: fs.readFileSync('server.crt')
+  cert: process.env.cert
+  //cert: fs.readFileSync('server.crt')
 };
 console.log('key');
 console.log('crt');
